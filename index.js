@@ -46,8 +46,8 @@ function crearTarjetas(informacion) {
             <h5 class="card-title">${departamento.name}</h5>
             <p class="card-text">Municipios: ${departamento.municipalities}</p>
             <p class="card-text">Población: ${departamento.population}</p>
-            <p class="card-text">Superficie: ${departamento.surface}</p>
-            <a href="antioquia.html" class="btn btn-primary">Detalles</a>
+            <p class="card-text">Superficie: ${departamento.surface} km²</p>
+            <a href="details.html?id=${departamento.id}" class="btn btn-primary">Detalles</a>
         </div>
     </div>
 `
