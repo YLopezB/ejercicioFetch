@@ -6,4 +6,8 @@ let urlCities = url + "/api/v1/Department/" + idDepartamento + "/cities"
 let urlNaturalAreas = url + "/api/v1/Department/" + idDepartamento + "/naturalareas"
 
 main.introduccion(urlDep)
-main.tarjetas(urlCities, urlNaturalAreas)
+
+document.getElementById("botonBuscar").addEventListener("click", () => {
+    let busqueda = document.getElementById("busquedaTexto").value.trim();
+    main.tarjetas(urlCities, urlNaturalAreas, busqueda)
+})
