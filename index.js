@@ -5,9 +5,6 @@ let urlDepartamentos = url + "/api/v1/Department"
 let urlCiudades = url + "/api/v1/City/"
 
 main.introduccion(urlColombia)
+main.tarjetas(urlDepartamentos, urlCiudades)
 
-document.getElementById("botonBuscar").addEventListener("click", () => {
-    let busqueda = document.getElementById("busquedaTexto").value.trim();
-    main.tarjetas(urlDepartamentos, urlCiudades, busqueda)
-})
 
