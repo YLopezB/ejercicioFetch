@@ -12,20 +12,22 @@
     <header>
         <div class="text-center container-fluid banner justify-content-center">
             <img src="./images/banner.png" alt="imagen de Colombia">
-            <h4>Colombia es un país ubicado en la región noroccidental de América del Sur. Es conocido por su rica biodiversidad y su cultura vibrante.</h4>
+            <h2>REALISMO MAGICO</h2>
+            <a href="#">Home</a>
+            <a href="especiesInvasoras.html">Espercies Invasoras</a>
         </div>
-        <div id="intro"></div>
     </header>
     <main class="container my-5">
+        <div id="intro"></div>
         <section>
             <h2 class="text-center mb-4">Departamentos de Colombia</h2>
             <div class="mb-3">
-                <input type="text" id="searchInput" class="form-control" placeholder="Buscar por nombre...">
+                <input type="text" id="busquedaTexto" class="form-control" placeholder="Buscar por nombre...">
             </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4" id="departamentos"></div>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4" id="tarjetas"></div>
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
