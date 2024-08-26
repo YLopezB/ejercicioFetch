@@ -13,7 +13,7 @@ export function introduccion(url){
     })
 }
 
-export function tarjetas(url1, url2, busqueda){
+export function tarjetas(url1, url2){
     contenedorTarjetas.innerHTML = ""
     if (url1 == "https://api-colombia.com/api/v1/Department") {
         fetch(url1).then(res => res.json()).then(dataDepartamento => {
@@ -21,8 +21,6 @@ export function tarjetas(url1, url2, busqueda){
                 let urlIdCuidad = url2 + departamento.cityCapitalId
                 fetch(urlIdCuidad).then(res => res.json()).then(dataCiudad => {
                     let cuidad = dataCiudad.name
-                    if (departamento.name.toLowerCase().includes(busqueda.toLowerCase()) || 
-                        cuidad.toLowerCase().includes(busqueda.toLowerCase())) {
                         crearTarjetas(departamento, cuidad)
                 })
             })
@@ -30,14 +28,12 @@ export function tarjetas(url1, url2, busqueda){
     }else {
         fetch(url1).then(res => res.json()).then(dataCiudad => {
             dataCiudad.forEach(ciudad => {
-                if (ciudad.name.toLowerCase().includes(busqueda.toLowerCase())) {
                     crearCuidad(ciudad)
             })
         })
         fetch(url2).then(res => res.json()).then(dataArea => {
             let areaNatural = dataArea[0].naturalAreas
             areaNatural.forEach(area => {
-                if (area.name.toLowerCase().includes(busqueda.toLowerCase())) {
                     crearArea(area)
             })
         })
